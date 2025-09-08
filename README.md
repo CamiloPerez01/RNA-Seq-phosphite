@@ -1,4 +1,4 @@
-# RNA-Seq-phosphite
+# RNA-Seq Phosphite
 In this section, we describe the methodology and code used to process the RNA-Seq data described in the article by Pérez-Salazar et al., 2025.
 The programs used to analyze the data were: 
 FastQC/0.11.2, 
