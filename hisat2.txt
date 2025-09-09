@@ -1,0 +1,57 @@
+###These programs were run on a server called "Mazorca" at UGA-LANGEBIO.
+
+
+#PBS -N hisat2
+#PBS -l nodes=1:ppn=8,vmem=36gb,walltime=100:00:00
+#PBS -V
+#PBS -q default
+
+cd $PBS_O_WORKDIR
+
+module load hisat2/2.0.4
+module load samtools/1.9
+
+samtools view -Su alns.sam | samtools sort - alns.sorted
+
+
+hisat2 -q  -x /LUSTRE/usuario/cperez/trasncriptomas_fosfito/genome_trichoderma/TaIMI_genome -1 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/50_clean/E250050987_clean_L01_13_1.fq.gz 
+-2 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/50_clean/E250050987_clean_L01_13_2.fq.gz --dta --dta-cufflinks  -S /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/E25005
+0987_clean_L01_13.sam
+samtools view -bS /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/E250050987_clean_L01_13.sam > /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/E250050987_clean_L01_13.bam
+samtools sort /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/E250050987_clean_L01_13.bam -o /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/E250050987_clean_L01_13.sorted.bam
+
+
+hisat2 -q  -x /LUSTRE/usuario/cperez/trasncriptomas_fosfito/genome_trichoderma/TaIMI_genome -1 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/42_clean/V350255651_clean_L02_42_1.fq.gz -2 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/42_clean/V350255651_clean_L02_42_2.fq.gz --dta --dta-cufflinks  -S /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_42.sam
+#samtools view -bS /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_42.sam > /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_42.bam
+#samtools sort /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_42.bam -o /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_42.sorted.bam
+
+hisat2 -q  -x /LUSTRE/usuario/cperez/trasncriptomas_fosfito/genome_trichoderma/TaIMI_genome -1 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/43_clean/V350255651_clean_L02_43_1.fq.gz -2 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/43_clean/V350255651_clean_L02_43_2.fq.gz --dta --dta-cufflinks  -S /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_43.sam
+#samtools view -bS /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_43.sam > /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_43.bam
+#samtools sort /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_43.bam -o /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_43.sorted.bam
+
+
+hisat2 -q  -x /LUSTRE/usuario/cperez/trasncriptomas_fosfito/genome_trichoderma/TaIMI_genome -1 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/44_clean/V350255651_clean_L02_44_1.fq.gz -2 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/44_clean/V350255651_clean_L02_44_2.fq.gz --dta --dta-cufflinks  -S /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_44.sam
+#samtools view -bS /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_44.sam > /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_44.bam
+#samtools sort /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_44.bam -o /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_44.sorted.bam
+
+hisat2 -q  -x /LUSTRE/usuario/cperez/trasncriptomas_fosfito/genome_trichoderma/TaIMI_genome -1 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/45_clean/V350255651_clean_L02_45_1.fq.gz -2 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/45_clean/V350255651_clean_L02_45_2.fq.gz --dta --dta-cufflinks  -S /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_45.sam
+#samtools view -bS /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_45.sam > /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_45.bam
+#samtools sort /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_45.bam -o /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_45.sorted.bam
+
+hisat2 -q  -x /LUSTRE/usuario/cperez/trasncriptomas_fosfito/genome_trichoderma/TaIMI_genome -1 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/46_clean/V350255651_clean_L02_46_1.fq.gz -2 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/46_clean/V350255651_clean_L02_46_2.fq.gz --dta --dta-cufflinks  -S /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_46.sam
+#samtools view -bS /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_46.sam > /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_46.bam
+#samtools sort /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_46.bam -o /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_46.sorted.bam
+
+hisat2 -q  -x /LUSTRE/usuario/cperez/trasncriptomas_fosfito/genome_trichoderma/TaIMI_genome -1 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/47_clean/V350255651_clean_L02_47_1.fq.gz -2 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/47_clean/V350255651_clean_L02_47_2.fq.gz --dta --dta-cufflinks  -S /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_47.sam
+#samtools view -bS /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_47.sam > /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_47.bam
+#samtools sort /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_47.bam -o /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_47.sorted.bam
+
+hisat2 -q  -x /LUSTRE/usuario/cperez/trasncriptomas_fosfito/genome_trichoderma/TaIMI_genome -1 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/48_clean/V350255651_clean_L02_48_1.fq.gz -2 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/48_clean/V350255651_clean_L02_48_2.fq.gz --dta --dta-cufflinks  -S /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_48.sam
+#samtools view -bS /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_48.sam > /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_48.bam
+#samtools sort /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_48.bam -o /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_48.sorted.bam
+
+hisat2 -q  -x /LUSTRE/usuario/cperez/trasncriptomas_fosfito/genome_trichoderma/TaIMI_genome -1 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/57_clean/V350255651_clean_L02_57_1.fq.gz -2 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/57_clean/V350255651_clean_L02_57_2.fq.gz --dta --dta-cufflinks  -S /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_57.sam
+#samtools view -bS /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_57.sam > /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_57.bam
+#samtools sort /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_57.bam -o /LUSTRE/usuario/cperez/trasncriptomas_fosfito/HISAT_mapping/V350255651_clean_L02_57.sorted.bam
+
+
