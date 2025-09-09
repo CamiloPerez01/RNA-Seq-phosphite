@@ -1,0 +1,27 @@
+###These programs were run on a server called "Mazorca" at UGA-LANGEBIO.
+
+
+#PBS -N SOAPnuke
+#PBS -l nodes=1:ppn=8,walltime=3000:00:000,vmem=24gb
+#PBS -q default
+
+module load SOAPnuke/2.1.9
+
+cd $PBS_O_WORKDIR
+
+SOAPnuke filter -1 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/transcriptomas_crudos/V350255651_L02_42_1.fq.gz -2 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/transcriptomas_crudos/V350255651_L02_42_2.fq.gz -C V350255651_clean_L02_42_1.fq.gz -D V350255651_clean_L02_42_2.fq.gz -o /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/42_clean -f AAGTCGGAGGCCAAGCGGTCTTAGGAAGACAA -r AAGTCGGATCGTAGCCATGTCGTTCTGTGAGCCAAGGAGTTG -l 5 -q 0.5 -n 0.05 
+
+SOAPnuke filter -1 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/transcriptomas_crudos/V350255651_L02_43_1.fq.gz -2 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/transcriptomas_crudos/V350255651_L02_43_2.fq.gz -C V350255651_clean_L02_43_1.fq.gz -D V350255651_clean_L02_43_2.fq.gz -o /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/43_clean -f AAGTCGGAGGCCAAGCGGTCTTAGGAAGACAA -r AAGTCGGATCGTAGCCATGTCGTTCTGTGAGCCAAGGAGTTG -l 5 -q 0.5 -n 0.05 
+
+SOAPnuke filter -1 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/transcriptomas_crudos/V350255651_L02_44_1.fq.gz -2 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/transcriptomas_crudos/V350255651_L02_44_2.fq.gz -C V350255651_clean_L02_44_1.fq.gz -D V350255651_clean_L02_44_2.fq.gz -o /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/44_clean -f AAGTCGGAGGCCAAGCGGTCTTAGGAAGACAA -r AAGTCGGATCGTAGCCATGTCGTTCTGTGAGCCAAGGAGTTG -l 5 -q 0.5 -n 0.05 
+
+SOAPnuke filter -1 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/transcriptomas_crudos/E250050987_L01_13_1.fq.gz -2 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/transcriptomas_crudos/E250050987_L01_13_2.fq.gz -C E250050987_clean_L01_13_1.fq.gz -D E250050987_clean_L01_13_2.fq.gz -o /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/50_clean -f AAGTCGGAGGCCAAGCGGTCTTAGGAAGACAA -r AAGTCGGATCGTAGCCATGTCGTTCTGTGAGCCAAGGAGTTG -l 5 -q 0.5 -n 0.05 
+
+SOAPnuke filter -1 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/transcriptomas_crudos/V350255651_L02_46_1.fq.gz -2 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/transcriptomas_crudos/V350255651_L02_46_2.fq.gz -C V350255651_clean_L02_46_1.fq.gz -D V350255651_clean_L02_46_2.fq.gz -o /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/46_clean -f AAGTCGGAGGCCAAGCGGTCTTAGGAAGACAA -r AAGTCGGATCGTAGCCATGTCGTTCTGTGAGCCAAGGAGTTG -l 5 -q 0.5 -n 0.05 
+
+SOAPnuke filter -1 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/transcriptomas_crudos/V350255651_L02_47_1.fq.gz -2 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/transcriptomas_crudos/V350255651_L02_47_2.fq.gz -C V350255651_clean_L02_47_1.fq.gz -D V350255651_clean_L02_47_2.fq.gz -o /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/47_clean -f AAGTCGGAGGCCAAGCGGTCTTAGGAAGACAA -r AAGTCGGATCGTAGCCATGTCGTTCTGTGAGCCAAGGAGTTG -l 5 -q 0.5 -n 0.05 
+
+SOAPnuke filter -1 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/transcriptomas_crudos/V350255651_L02_48_1.fq.gz -2 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/transcriptomas_crudos/V350255651_L02_48_2.fq.gz -C V350255651_clean_L02_48_1.fq.gz -D V350255651_clean_L02_48_2.fq.gz -o /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/48_clean -f AAGTCGGAGGCCAAGCGGTCTTAGGAAGACAA -r AAGTCGGATCGTAGCCATGTCGTTCTGTGAGCCAAGGAGTTG -l 5 -q 0.5 -n 0.05 
+
+SOAPnuke filter -1 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/transcriptomas_crudos/V350255651_L02_57_1.fq.gz -2 /LUSTRE/usuario/cperez/trasncriptomas_fosfito/transcriptomas_crudos/V350255651_L02_57_2.fq.gz -C V350255651_clean_L02_57_1.fq.gz -D V350255651_clean_L02_57_2.fq.gz -o /LUSTRE/usuario/cperez/trasncriptomas_fosfito/archivos_procesados/57_clean -f AAGTCGGAGGCCAAGCGGTCTTAGGAAGACAA -r AAGTCGGATCGTAGCCATGTCGTTCTGTGAGCCAAGGAGTTG -l 5 -q 0.5 -n 0.05 
+
