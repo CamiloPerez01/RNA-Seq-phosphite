@@ -113,12 +113,12 @@ T05mMPhi_R3<-featureCounts("/Volumes/ADATA_cam/Transcriptomas fosfito/archivos_s
                            isPairedEnd=TRUE)
 
 #We create the accounts table
-matriz_cuentas<-cbind(control_1mMPi_R1$counts,control_1mMPi_R2$counts,control_1mMPi_R3$counts,
+matrix_accounts<-cbind(control_1mMPi_R1$counts,control_1mMPi_R2$counts,control_1mMPi_R3$counts,
                       T01mMPhi_R1$counts,T01mMPhi_R2$counts,T01mMPhi_R3$counts,
                       T05mMPhi_R1$counts,T05mMPhi_R2$counts,T05mMPhi_R3$counts)
 #We download the table of accounts in .csv and .txt format
-write.csv(matriz_cuentas, file = "/Volumes/ADATA_cam/Transcriptomas fosfito/matriz_cuentas.csv")
-write.table(matriz_cuentas, file = "/Volumes/ADATA_cam/Transcriptomas fosfito/matriz_cuentas_nuevo.txt")
+write.csv(matriz_cuentas, file = "/Volumes/ADATA_cam/Transcriptomas fosfito/matrix_accounts.csv")
+write.table(matriz_cuentas, file = "/Volumes/ADATA_cam/Transcriptomas fosfito/matrix_accounts.txt")
 
 #we create an output directory
 outpathcount2 = "/Volumes/ADATA_cam/Transcriptomas fosfito/"
@@ -142,7 +142,7 @@ library(edgeR)
 
 
 #let's read the table
-counts = read.table("matriz_cuentas_nuevo.txt") 
+counts = read.table("matrix_accounts.txt") 
 
 
 #This command will eliminate those genes that have
